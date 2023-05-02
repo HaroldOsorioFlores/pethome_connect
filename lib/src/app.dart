@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pethome_connect/src/screens/home/home_page.dart';
+import 'package:pethome_connect/src/screens/home_page.dart';
+import 'package:pethome_connect/src/screens/login_page.dart';
+import 'package:pethome_connect/src/screens/signUp_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -12,7 +14,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: Center(child: HomePage()),
+      initialRoute: '/',
+      routes: {
+        // When navigating to the "/" route, build the FirstScreen widget.
+        '/': (context) => LoginPage(),
+        // When navigating to the "/second" route, build the SecondScreen widget.
+        '/HomePage': (context) => HomePage(),
+        '/SignUpPage': (context) => SignUpPage(),
+      },
     );
   }
 }
