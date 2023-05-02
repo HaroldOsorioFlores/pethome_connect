@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
@@ -22,7 +21,7 @@ class _LoginPageState extends State<LoginPage> {
               Container(
                 height: 150,
                 width: 150,
-                child: Image.asset('assets/animal.png'),
+                child: Image.asset('lib/src/assets/image_login_pets.jpg'),
               ),
               Text(
                 "Login",
