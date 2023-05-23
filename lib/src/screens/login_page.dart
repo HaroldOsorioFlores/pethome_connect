@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
@@ -55,7 +56,7 @@ class _LoginPageState extends State<LoginPage> {
                   prefixIcon: Icon(Icons.password),
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 30),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -65,6 +66,19 @@ class _LoginPageState extends State<LoginPage> {
                       Navigator.pushNamed(context, '/SignUpPage');
                     },
                     child: Text('Crear una cuenta'),
+                  ),
+                ],
+              ),
+              SizedBox(height: 30),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                      // Acción al presionar el botón de Crear una cuenta
+                      Navigator.pushNamed(context, '/HomePage');
+                    },
+                    child: Text('Ingresar'),
                   ),
                 ],
               ),

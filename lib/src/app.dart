@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pethome_connect/src/screens/home_page.dart';
 import 'package:pethome_connect/src/screens/login_page.dart';
+import 'package:pethome_connect/src/screens/report_page.dart';
 import 'package:pethome_connect/src/screens/signUp_page.dart';
 
 class MyApp extends StatelessWidget {
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
         // When navigating to the "/second" route, build the SecondScreen widget.
         '/HomePage': (context) => HomePage(),
         '/SignUpPage': (context) => SignUpPage(),
+        '/reportPage':(context) => reportPage(),
       },
     );
   }
