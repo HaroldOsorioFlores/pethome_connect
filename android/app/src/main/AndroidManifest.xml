@@ -1,6 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.pethome_connect">
-    <uses-permissiona android:name="android.permission.INTERNET"/>
    <application
         android:label="pethome_connect"
         android:name="${applicationName}"
