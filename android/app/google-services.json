@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "640501216685",
+    "project_id": "pethome-connect-api",
+    "storage_bucket": "pethome-connect-api.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:640501216685:android:2a265ae2ec7f9a00751d24",
+        "android_client_info": {
+          "package_name": "com.example.pethome_connect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "640501216685-f7bf9ht9r3oah08909tc5mqahpne9lqu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBK6-M02DSodCyXcbsTHw0Q74i1lnP1WoE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "640501216685-f7bf9ht9r3oah08909tc5mqahpne9lqu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "640501216685-6nfbs4660s81n1j35rucvira1lkfbdod.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.pethomeConnect"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
