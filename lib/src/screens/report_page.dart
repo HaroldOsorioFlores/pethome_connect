@@ -5,7 +5,7 @@ class reportPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("INICIO"),
+        title: Text("REPORTES "),
       ),
       drawer: Drawer(
         child: ListView(
