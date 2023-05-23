@@ -12,7 +12,7 @@ class _SignUpPageState extends State<SignUpPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Title'),
+          title: const Text('Sing Up'),
         ),
         body: SingleChildScrollView(
           child: Container(
@@ -89,9 +89,9 @@ class _SignUpPageState extends State<SignUpPage> {
                     ElevatedButton(
                       onPressed: () {
                         // Acción al presionar el botón de Crear una cuenta
-                        Navigator.pushNamed(context, '/HomePage');
+                        Navigator.pushNamed(context, '/SignUpPage');
                       },
-                      child: Text('Home'),
+                      child: Text('Create account'),
                     ),
                   ],
                 ),
