@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:pethome_connect/src/screens/home_page.dart';
 import 'package:pethome_connect/src/screens/login_page.dart';
+import 'package:pethome_connect/src/screens/pet_page.dart';
 import 'package:pethome_connect/src/screens/report_page.dart';
 import 'package:pethome_connect/src/screens/signUp_page.dart';
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,12 +17,11 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        // When navigating to the "/" route, build the FirstScreen widget.
         '/': (context) => LoginPage(),
-        // When navigating to the "/second" route, build the SecondScreen widget.
         '/HomePage': (context) => HomePage(),
         '/SignUpPage': (context) => SignUpPage(),
-        '/reportPage':(context) => reportPage(),
+        '/reportPage': (context) => reportPage(),
+        '/petPage': (context) => petPage(),
       },
     );
   }

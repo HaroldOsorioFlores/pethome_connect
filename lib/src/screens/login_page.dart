@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+
+
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
-
   @override
   _LoginPageState createState() => _LoginPageState();
 }
@@ -80,8 +83,20 @@ class _LoginPageState extends State<LoginPage> {
                     },
                     child: Text('Ingresar'),
                   ),
+                  SizedBox(height: 10),
+                  SizedBox(width: 0),
+                  ElevatedButton(
+                    onPressed: () {
+                      // Acción al presionar el botón de Crear una cuenta
+                      Navigator.pushNamed(context, '/SignUpPage');
+                    },
+                    child: Text('Google'),
+                  ),
                 ],
+                
               ),
+              
+              
             ],
           ),
         ),

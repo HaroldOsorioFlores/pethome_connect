@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
             ListTile(
               title: Text('Apoyar'),
               onTap: () {
-                // TODO: handle menu item 2 press
+                Navigator.pushNamed(context, '/petPage');
               },
             ),ListTile(
               title: Text('Ubicar'),

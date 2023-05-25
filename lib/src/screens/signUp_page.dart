@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pethome_connect/services/firebase_get.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({Key? key}) : super(key: key);
@@ -8,6 +9,11 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
+  TextEditingController name = TextEditingController(text: "");
+  TextEditingController lastname = TextEditingController(text: "");
+  TextEditingController email = TextEditingController(text: "");
+  TextEditingController password = TextEditingController(text: "");
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,6 +36,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 ),
                 SizedBox(height: 20),
                 TextFormField(
+                  controller: name,
                   maxLength: 20,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
@@ -43,6 +50,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   ),
                 ),
                 TextFormField(
+                  controller: lastname,
                   maxLength: 20,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
@@ -56,6 +64,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   ),
                 ),
                 TextFormField(
+                  controller: email,
                   maxLength: 50,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
@@ -69,6 +78,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   ),
                 ),
                 TextFormField(
+                  controller: password,
                   maxLength: 15,
                   obscureText: true,
                   decoration: InputDecoration(
@@ -87,9 +97,10 @@ class _SignUpPageState extends State<SignUpPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     ElevatedButton(
-                      onPressed: () {
-                        // Acción al presionar el botón de Crear una cuenta
-                        Navigator.pushNamed(context, '/SignUpPage');
+                      onPressed: () async {
+                        await insertUser(name.text,lastname.text,email.text,password.text).then((_) => {
+                          Navigator.pop(context)
+                        });
                       },
                       child: Text('Create account'),
                     ),
